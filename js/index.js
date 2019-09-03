@@ -37,6 +37,59 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+const moreAnchorTags = document.querySelectorAll('a');
+moreAnchorTags[0].textContent = siteContent.nav['nav-item-1'];
+moreAnchorTags[1].textContent = siteContent.nav['nav-item-2'];
+moreAnchorTags[2].textContent = siteContent.nav['nav-item-3'];
+moreAnchorTags[3].textContent = siteContent.nav['nav-item-4'];
+moreAnchorTags[4].textContent = siteContent.nav['nav-item-5'];
+moreAnchorTags[5].textContent = siteContent.nav['nav-item-6'];
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let cta = document.getElementById("cta-img");
+cta.setAttribute('src', siteContent["cta"]["img-src"])
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const head1 = document.querySelector('h1')
+head1.textContent = "Dom is Awesome";
+
+const button1 = document.querySelector('button')
+button1.textContent = "Get Started";
+
+const head4 = document.querySelectorAll('h4');
+head4[0].textContent = siteContent.nav['nav-item-1'];
+head4[1].textContent = siteContent.nav['nav-item-2'];
+head4[2].textContent = siteContent.nav['nav-item-3'];
+head4[3].textContent = siteContent.nav['nav-item-4'];
+head4[4].textContent = siteContent.nav['nav-item-5'];
+head4[5].textContent = siteContent.nav['nav-item-6'];
+
+const para = document.querySelectorAll('p');
+para[0].textContent = siteContent['main-content']['features-content'];
+para[1].textContent = siteContent['main-content']['about-content'];
+para[2].textContent = siteContent['main-content']['services-content'];
+para[3].textContent = siteContent['main-content']['product-content'];
+para[4].textContent = siteContent['main-content']['vision-content'];
+para[5].textContent = siteContent['contact']['contact-h4'];
+para[6].textContent = siteContent['contact']['address'];
+para[7].textContent = siteContent['contact']['phone'];
+para[8].textContent = siteContent['contact']['email'];
+
+const navtext = document.querySelectorAll('a');
+  navtext.forEach(aTag =>{
+    aTag.style.color = 'green';
+  })
+
+const subnav = document.createElement('h2');
+subnav.textContent = "extra"
+subnav.style.fontSize = "2rem"
+navElem.prepend(subnav);
+
+const navel = document.querySelector('header');
+const subnavel = document.createElement('p')
+subnavel.textContent = "extra extra!"
+navel.appendChild(subnavel)
